@@ -32,7 +32,7 @@ yarn-error.*
 
 # local env files
 .env*.local
-constants/apiKeys.js
+src/constants/apiKeys.js
 
 # typescript
 *.tsbuildinfo
