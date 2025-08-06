@@ -1,1 +1,0 @@
-export const AVIATIONSTACK_API_KEY = 'e3f5b6855caa77320710d8ba1552aa9a';
