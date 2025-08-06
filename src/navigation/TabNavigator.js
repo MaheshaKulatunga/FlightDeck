@@ -42,7 +42,7 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Spot" component={SpotStack} options={{ title: 'Spot' }} />
-      <Tab.Screen name="Logbook" component={LogStack} options={{ title: 'Log Book' }} />
+      <Tab.Screen name="Logbook" component={LogStack} options={{ title: 'Logbook' }} />
     </Tab.Navigator>
   );
 };
