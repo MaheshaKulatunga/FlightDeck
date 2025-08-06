@@ -2,7 +2,6 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
-
 import SpotScreen from '../screens/SpotScreen';
 import LogbookScreen from '../screens/LogbookScreen';
 import AircraftProfileScreen from '../screens/AircraftProfileScreen';
@@ -13,6 +12,13 @@ const Stack = createNativeStackNavigator();
 const SpotStack = () => (
   <Stack.Navigator>
     <Stack.Screen name="SpotHome" component={SpotScreen} options={{ title: 'Spot Aircraft' }} />
+    <Stack.Screen name="AircraftProfile" component={AircraftProfileScreen} options={{ title: 'Aircraft Profile' }} />
+  </Stack.Navigator>
+);
+
+const LogStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Logbook" component={LogbookScreen} options={{ title: 'Log Aircraft' }} />
     <Stack.Screen name="AircraftProfile" component={AircraftProfileScreen} options={{ title: 'Aircraft Profile' }} />
   </Stack.Navigator>
 );
@@ -36,7 +42,7 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Spot" component={SpotStack} options={{ title: 'Spot' }} />
-      <Tab.Screen name="Logbook" component={LogbookScreen} />
+      <Tab.Screen name="Logbook" component={LogStack} options={{ title: 'Log Book' }} />
     </Tab.Navigator>
   );
 };
